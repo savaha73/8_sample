@@ -11,12 +11,16 @@ PRD를 바탕으로 만든 모바일 우선 고객용 프로토타입입니다.
 - 모바일 하단 고정 투표 버튼
 - 미입력 실매장 정보의 명확한 placeholder 처리
 - 메뉴별 AI 콘셉트 제품 사진과 AI 이미지 식별 표기
+- 커피잔 SVG 파비콘
+- Open Graph 및 X/Twitter 공유 이미지 메타데이터
 
 ## 이미지 에셋
 
 - `dist/assets/menu-mix-cream-v2.png`
 - `dist/assets/menu-banana-latte-v2.png`
 - `dist/assets/menu-black-sesame-v2.png`
+- `dist/assets/og-bangka-v1.png`
+- `dist/assets/favicon.svg`
 
 이미지는 PRD의 따뜻한 감성 카페 방향에 맞춰 생성한 콘셉트 사진입니다. 실제 제품 촬영본이 준비되면 동일 파일 참조 위치에서 교체할 수 있습니다.
 
