@@ -1,0 +1,13 @@
+# Local deployment packages
+*.zip
+
+# Local preview and tooling
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log

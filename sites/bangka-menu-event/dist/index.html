@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4eadc" />
+  <meta name="description" content="방카의 새로운 세 가지 맛을 만나고 마음에 드는 메뉴에 투표해 보세요." />
+  <title>방카 | 오늘의 한 잔에 투표하세요</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./visual-refresh.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 바로가기</a>
+  <div class="notice" role="status">
+    <span>NEW</span>
+    <p>이 페이지는 출시 준비용 미리보기입니다. 실제 매장 정보는 오픈 전에 업데이트됩니다.</p>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="방카 홈">
+      <span class="brand-mark" aria-hidden="true">ㅂ</span>
+      <span>BANGKA</span>
+    </a>
+    <a class="header-vote" href="#vote">투표하기 <span aria-hidden="true">↓</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">BANGKA NEW MENU WEEK</p>
+        <h1>익숙한 맛에<br /><em>새로운 한 모금</em></h1>
+        <p class="hero-lead">달콤하고 고소한 세 가지 신메뉴.<br />당신의 오늘과 가장 잘 어울리는 한 잔을 골라주세요.</p>
+        <div class="event-chips" aria-label="이벤트 핵심 정보">
+          <strong>7 DAYS</strong><span>전 메뉴</span><strong>20% OFF</strong>
+        </div>
+        <a class="primary-cta" href="#menu">세 가지 맛 만나보기 <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" aria-label="방카 신메뉴 AI 콘셉트 사진">
+        <div class="hero-photo-stack">
+          <figure class="hero-photo hero-photo-main"><img src="./assets/menu-banana-latte-v2.png" alt="바나나 구름 라테 AI 콘셉트 이미지" /></figure>
+          <figure class="hero-photo hero-photo-left"><img src="./assets/menu-mix-cream-v2.png" alt="방카 믹스 크림 AI 콘셉트 이미지" /></figure>
+          <figure class="hero-photo hero-photo-right"><img src="./assets/menu-black-sesame-v2.png" alt="흑임자 크림커피 AI 콘셉트 이미지" /></figure>
+        </div>
+        <p class="concept-tag">AI CONCEPT · 실제 제품과 다를 수 있습니다</p>
+      </div>
+    </section>
+
+    <section class="event-band" aria-labelledby="event-title">
+      <div>
+        <p class="section-kicker">ONLY THIS WEEK</p>
+        <h2 id="event-title">마음에 담고,<br />20% 가볍게.</h2>
+      </div>
+      <div class="event-status">
+        <p class="date">2026. 11. 14 — 11. 20</p>
+        <div class="countdown" id="countdown" aria-live="polite">
+          <span><strong id="days">06</strong><small>DAYS</small></span>
+          <i>:</i><span><strong id="hours">09</strong><small>HOURS</small></span>
+          <i>:</i><span><strong id="minutes">42</strong><small>MIN</small></span>
+        </div>
+        <p class="status-note"><i aria-hidden="true"></i> 이벤트가 진행 중이에요</p>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">THREE NEW FLAVORS</p><h2 id="menu-title">오늘, 어떤 맛에<br />끌리나요?</h2></div>
+        <p>신메뉴 이미지는 콘셉트 일러스트이며<br />실제 제품과 다를 수 있습니다.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-card" data-menu="mix">
+          <div class="menu-visual visual-mix">
+            <span class="menu-number">01</span><img src="./assets/menu-mix-cream-v2.png" alt="크림을 얹은 방카 믹스 크림 AI 콘셉트 사진" loading="lazy" /><small>AI CONCEPT</small>
+          </div>
+          <div class="menu-body">
+            <p class="menu-type">NOSTALGIC · CREAMY</p><h3>방카 믹스 크림</h3>
+            <p>달콤한 믹스커피 위에 폭신한 크림. 익숙해서 더 반가운 한 잔.</p>
+            <details><summary>맛과 재료 보기 <span>＋</span></summary><p>믹스커피 · 우유 · 크림<br />부드럽고 달콤한 고소함</p></details>
+            <div class="price"><s>4,500원</s><strong>3,600원</strong><mark>20% OFF</mark></div>
+          </div>
+        </article>
+        <article class="menu-card featured" data-menu="banana">
+          <div class="menu-visual visual-banana">
+            <span class="menu-number">02</span><img src="./assets/menu-banana-latte-v2.png" alt="바나나 구름 라테 AI 콘셉트 사진" loading="lazy" /><small>AI CONCEPT</small>
+          </div>
+          <div class="menu-body">
+            <p class="menu-type">SWEET · MILKY</p><h3>바나나 구름 라테</h3>
+            <p>포근한 바나나우유와 커피가 만난, 노란 오후 같은 달콤함.</p>
+            <details><summary>맛과 재료 보기 <span>＋</span></summary><p>바나나우유 · 에스프레소 · 밀크폼<br />달콤하고 둥근 끝맛</p></details>
+            <div class="price"><s>4,800원</s><strong>3,840원</strong><mark>20% OFF</mark></div>
+          </div>
+        </article>
+        <article class="menu-card" data-menu="sesame">
+          <div class="menu-visual visual-sesame">
+            <span class="menu-number">03</span><img src="./assets/menu-black-sesame-v2.png" alt="흑임자 크림커피 AI 콘셉트 사진" loading="lazy" /><small>AI CONCEPT</small>
+          </div>
+          <div class="menu-body">
+            <p class="menu-type">NUTTY · DEEP</p><h3>흑임자 크림커피</h3>
+            <p>짙은 커피와 고소한 흑임자 크림. 천천히 오래 남는 깊은 맛.</p>
+            <details><summary>맛과 재료 보기 <span>＋</span></summary><p>에스프레소 · 흑임자 · 크림<br />진하고 고소한 여운</p></details>
+            <div class="price"><s>4,900원</s><strong>3,920원</strong><mark>20% OFF</mark></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="vote-section" id="vote" aria-labelledby="vote-title">
+      <div class="vote-intro">
+        <p class="section-kicker">YOUR PICK, OUR NEXT CUP</p>
+        <h2 id="vote-title">당신의 마음은<br />어느 잔에 있나요?</h2>
+        <p>하트를 누르면 한 표가 바로 담겨요.<br />마음이 바뀌면 언제든 다시 투표할 수 있어요.</p>
+        <span class="demo-badge">데모 투표 · 실제 집계와 분리</span>
+      </div>
+      <div class="vote-panel" id="vote-panel">
+        <p class="panel-label">한 잔을 선택해 주세요</p>
+        <div class="vote-options" role="group" aria-label="신메뉴 투표">
+          <button type="button" data-vote="mix"><span class="mini-cup mix"></span><b>방카 믹스 크림</b><i>♡</i></button>
+          <button type="button" data-vote="banana"><span class="mini-cup banana"></span><b>바나나 구름 라테</b><i>♡</i></button>
+          <button type="button" data-vote="sesame"><span class="mini-cup sesame"></span><b>흑임자 크림커피</b><i>♡</i></button>
+        </div>
+        <p class="vote-help" id="vote-help">로그인 없이 자유롭게 참여할 수 있어요.</p>
+      </div>
+      <div class="result-panel" id="result-panel" hidden>
+        <p class="result-check">♥</p><p class="panel-label">마음이 잘 도착했어요</p>
+        <h3><span id="picked-name">바나나 구름 라테</span>에<br />투표했어요!</h3>
+        <div class="ranking" id="ranking" aria-label="현재 득표율"></div>
+        <button type="button" id="vote-again">다시 투표하기</button>
+      </div>
+    </section>
+
+    <section class="store-section" aria-labelledby="store-title">
+      <div class="store-art"><span>BANGKA</span><p>COFFEE & REST</p></div>
+      <div class="store-info">
+        <p class="section-kicker">COME SAY HELLO</p><h2 id="store-title">방카에서 만나요.</h2>
+        <dl><div><dt>주소</dt><dd>오픈 전 매장 주소를 업데이트할 예정입니다.</dd></div><div><dt>영업시간</dt><dd>관리자 입력 대기 중</dd></div><div><dt>휴무</dt><dd>관리자 입력 대기 중</dd></div></dl>
+        <button class="map-button" type="button" disabled>네이버 지도 정보 준비 중</button>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="brand footer-brand"><span class="brand-mark">ㅂ</span><span>BANGKA</span></div><p>오늘의 쉼표가 되는 한 잔.</p><small>© 2026 BANGKA. LAUNCH PREVIEW.</small></footer>
+  <a class="sticky-vote" href="#vote"><span>♥</span> 내 마음에 투표하기</a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

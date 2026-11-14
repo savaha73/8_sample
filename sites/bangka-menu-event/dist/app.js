@@ -1,0 +1,12 @@
+const menuNames={mix:'방카 믹스 크림',banana:'바나나 구름 라테',sesame:'흑임자 크림커피'};
+const baseVotes={mix:42,banana:58,sesame:35};
+const getVotes=()=>{try{return {...baseVotes,...JSON.parse(localStorage.getItem('bangka-demo-votes')||'{}')}}catch{return {...baseVotes}}};
+const saveVotes=v=>localStorage.setItem('bangka-demo-votes',JSON.stringify(v));
+const toast=document.querySelector('#toast');
+function showToast(message){toast.textContent=message;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200)}
+function renderRanking(){const votes=getVotes(),total=Object.values(votes).reduce((a,b)=>a+b,0);const sorted=Object.entries(votes).sort((a,b)=>b[1]-a[1]);document.querySelector('#ranking').innerHTML=sorted.map(([id,count],idx)=>{const pct=total?Math.round(count/total*100):0;return `<div class="rank-row"><span>${idx===0?'현재 1위 · ':''}${menuNames[id]}<i class="rank-track"><i class="rank-fill" style="width:${pct}%"></i></i></span><b>${pct}%</b></div>`}).join('')}
+document.querySelectorAll('[data-vote]').forEach(button=>button.addEventListener('click',()=>{const id=button.dataset.vote;document.querySelectorAll('[data-vote]').forEach(b=>b.disabled=true);button.querySelector('i').textContent='♥';document.querySelector('#vote-help').textContent='마음을 담는 중이에요…';setTimeout(()=>{const votes=getVotes();votes[id]=(votes[id]||0)+1;saveVotes(votes);document.querySelector('#picked-name').textContent=menuNames[id];renderRanking();document.querySelector('#vote-panel').hidden=true;document.querySelector('#result-panel').hidden=false;showToast('투표가 저장되었습니다');document.querySelectorAll('[data-vote]').forEach(b=>{b.disabled=false;b.querySelector('i').textContent='♡'});document.querySelector('#vote-help').textContent='로그인 없이 자유롭게 참여할 수 있어요.'},520)}));
+document.querySelector('#vote-again').addEventListener('click',()=>{document.querySelector('#result-panel').hidden=true;document.querySelector('#vote-panel').hidden=false;document.querySelector('#vote-panel').focus?.()});
+const endAt=new Date('2026-11-20T23:59:59+09:00');
+function updateCountdown(){const diff=Math.max(0,endAt-Date.now());const days=Math.floor(diff/86400000),hours=Math.floor(diff/3600000)%24,minutes=Math.floor(diff/60000)%60;document.querySelector('#days').textContent=String(days).padStart(2,'0');document.querySelector('#hours').textContent=String(hours).padStart(2,'0');document.querySelector('#minutes').textContent=String(minutes).padStart(2,'0')}
+updateCountdown();setInterval(updateCountdown,30000);
