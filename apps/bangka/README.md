@@ -23,3 +23,9 @@ npm run build
 - Output Directory: `dist`
 
 `package-lock.json`은 Vite 8과 호환되는 `esbuild@0.28.2`를 고정해 깨끗한 Vercel 환경에서도 동일한 의존성을 설치합니다.
+
+## 공유 이미지
+
+- 커피잔 SVG 파비콘: `public/favicon.svg`
+- Open Graph 이미지: `public/og-bangka-v1.png`
+- Open Graph 및 X/Twitter 카드 메타데이터: `index.html`
