@@ -6,6 +6,7 @@
 
 - [제품 요구사항 문서](./PRD.md)
 - [사이트 소스](./sites/bangka-menu-event)
+- [Vite·React 애플리케이션](./apps/bangka)
 - [배포된 비공개 미리보기](https://bangka-new-menu-2026.silvermusic64.chatgpt.site)
 
 ## 현재 구현
@@ -27,6 +28,16 @@ python -m http.server 4173 -d dist
 ```
 
 브라우저에서 `http://localhost:4173`을 엽니다.
+
+### Vite·React 버전
+
+```powershell
+cd apps/bangka
+npm ci
+npm run dev
+```
+
+Vercel에서는 Root Directory를 `apps/bangka`로 설정하고 Build Command는 `npm run build`, Output Directory는 `dist`를 사용합니다.
 
 ## 운영 전 연결이 필요한 항목
 

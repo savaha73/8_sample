@@ -1,0 +1,6 @@
+{
+  "name": "방카(BANGKA) 신메뉴 출시 이벤트",
+  "description": "카페 방카 신메뉴 3종 출시 기념 20% 할인 및 매장 QR코드 기반 인기 투표 웹사이트",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
